@@ -65,15 +65,18 @@ body {
     display: flex;
     align-items: center;
 }
-nav ul {
+.nav ul {
     display: flex;
     margin-bottom: 0;
 }
-nav ul a {
+.nav ul a {
     font-size: 14px;
 }
-nav ul li {
+.nav ul li {
     margin-left: 25px;
+}
+.mobile {
+    display: none;
 }
 .header.main {
     display: flex;
@@ -96,7 +99,6 @@ nav ul li {
     background: url(../img/slider.jpg) center no-repeat;
     background-size: cover;
     width: auto;
-    min-width: 900px;
     height: 730px;
 }
 .title {
@@ -113,7 +115,7 @@ nav ul li {
 }
 .banner_paragraph {
     margin-bottom: 45px;
-    width: 468px;
+    max-width: 468px;
     height: 62px;
 }
 .paragraph {
@@ -194,19 +196,57 @@ nav ul li {
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width : 892px) {
-    html {
-        width: fit-content;
-    }
+   
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
+    .nav ul {
+        display: none;
+    }
+    .mobile {
+    font-size: 17px;
+    display: flex;
+    position: absolute;
+    top: 89px;
+    background: white;
+    width: 100%;
+    justify-content: space-around;
+    }
+    .navbar-nav {
+        display: -ms-flexbox;
+        display: flex;
+        position: absolute;
+        margin-top: 50px;
+        width: 93%;
+    }
+    .header.main {
+        padding: 0;
+        height: 80px;
+        flex-direction: column;
+        border-bottom: 2px solid black;
+        margin: 10px 0;
+    }
+    .main-banner__content {
+        padding-top: 21%;
+    }
+    .header.main-contact {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .main-contact i {
+        font-size: 19px;
+        margin: 0 15px 0 0px;
+    }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 575px) {
-
+    .paragraph {
+        padding-right: 15px;
+        margin-bottom: 70px;
+    }
 }
 
 /* Extra Small Devices, Phones */
@@ -216,7 +256,9 @@ nav ul li {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 410px) {
-
+    .main-contact a {
+        font-size: 14px;
+    }
 }
 
 

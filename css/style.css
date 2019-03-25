@@ -110,6 +110,9 @@ body {
     font-weight: bold;
     margin-bottom: 0;
 }
+.title__features {
+    margin-bottom: 70px;
+}
 .subtitle-text {
     margin-bottom: 30px;
 }
@@ -147,9 +150,127 @@ body {
     border-color: rgb(203, 203, 203);
 }
 
+/*===============.heading-feature==============*/
+.heading-feature__content {
+    display: flex;
+    margin-bottom: 100px;
+}
+.title-bold {
+    text-align: center;
+    color: rgb(99, 108, 108);
+    font-weight: bold;
+    margin: 100px 0 30px 0;
+}
+.paragraph-general {
+    font-size: 16px;
+    color: rgb(175, 184, 184);
+    max-width: 750px;
+    text-align: center;
+    margin: 0 auto;
+}
+.list_title {
+    display: flex;
+    font-size: 20px;
+    color: rgb(159, 169, 169);
+    margin-bottom: 0;
+    align-items: center;
+    transition: .5s;
+  }
+  .list li {
+      display: flex;
+      margin-bottom: 70px;
+      position: relative;
+      width: 295px;
+  }
+  .list li > i {
+      display: block;
+      color: rgb(159, 169, 169);
+      width: 45px;
+      height: 45px;
+      font-size: 50px;
+      margin: 0 40px 0 0;
+  }
+  .list ul {
+    max-width: 312px;
+    border-right: 1px solid  rgb(219, 226, 226);
+    margin-bottom: 0;
+    padding: 40px 0 36px 0;
+  }
+  .list li:last-child {
+    margin-bottom: 0;
+  }
+  .after {
+    display: block;
+    position: absolute;
+    background-color: rgb(93, 202, 136);
+    right: -6px;
+    bottom: -34px;
+    width: 11px;
+    height: 80px;
+    opacity: 0;
+    transition: .5s;
+  }
+  .list ul li:hover {
+     cursor: pointer;
+  }
+  .list ul li:hover .after {
+      opacity: 1;
+      transition: .5s;
+  }
+  .list ul li:hover .fa-heart,
+  .list ul li:hover .fas {
+      color: rgb(93, 202, 136);
+      transition: .5s;
+  }
+  .fa-heart,
+  .fas {
+      transition: .5s;
+  }
+  .list ul li:hover .list_title {
+    color: rgb(99, 108, 108);
+    transition: .5s;
+  }
+  .list__items i {
+    font-size: 200px;
+    color: rgb(93, 202, 136);
+  }
+  .features__list-items {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .list__items {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .p-list_items {
+    text-align: left;
+    max-width: 630px;
+  }
+  .subtitle-general {
+    font-size: 24px;
+    color: rgb(99, 108, 108);
+    font-weight: normal;
+  }
+  .sub-list_items {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    margin: 70px 0 30px 0;
+  }
+  .heart {
+      opacity: 1;
+  }
+  .show-mobile {
+      position: absolute;
+      opacity: 0;
+  }
+
+  
+  
 
 
-/*====================header===================*/
 /*====================header===================*/
 /*====================header===================*/
 /*====================header===================*/
@@ -175,6 +296,7 @@ body {
     .header.main {
         justify-content: space-evenly;
     }
+    /* .main-banner */
     .main-banner__content {
         justify-content: normal;
         padding-left: 7%;
@@ -182,6 +304,16 @@ body {
     }
     .main-banner {
         height: 550px;
+    }
+    /* .heading-feature */
+    .wrapper-feature {
+        margin: 0 30px;
+    }
+    .features__list-items {
+        margin: 0 0 0 30px;
+    }
+    .heading-feature__content {
+        justify-content: space-evenly;
     }
 }
 
@@ -237,15 +369,59 @@ body {
     }
     .main-contact i {
         font-size: 19px;
-        margin: 0 15px 0 0px;
+        margin: 0 15px 0 0;
+    }
+    .main-banner {
+        background: url(../img/slider.jpg) no-repeat;
+    }
+    .main-banner {
+        height: 520px;
     }
 }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 650px) {
+    .fetures__list {
+        display: none;
+    }
+    .show-mobile {
+        opacity: 1;
+        display: flex;
+        position: relative;
+    }
+    .heading-feature__content {
+        margin-bottom: 50px;
+    }
+    .title-bold {
+        margin-top: 50px;
+    }
+    .features__list-items {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .sub-list_items {
+        text-align: center;
+    }
+    .p-list_items {
+        margin-bottom: 60px;
+    }
+}
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 575px) {
     .paragraph {
         padding-right: 15px;
         margin-bottom: 70px;
+    }
+    .button-o {
+        font-size: 18px;
+        width: 190px;
+        height: 45px;
+    }
+    .list__items i {
+        font-size: 150px;
     }
 }
 

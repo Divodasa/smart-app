@@ -140,10 +140,12 @@ body {
     background: transparent;
     border: 2px solid;
     cursor: pointer;
+    transition: .5s;
 }
 .button-o:hover {
-    border-color: rgb(179, 179, 179);
-    color: rgb(179, 179, 179);
+    outline: transparent;
+    border-color: rgb(93, 202, 136);
+    transition: .5s;
 }
 .banner__button {
     color: rgb(255, 255, 255);
@@ -176,26 +178,26 @@ body {
     align-items: center;
     transition: .5s;
   }
-  .list li {
+.list li {
       display: flex;
       margin-bottom: 70px;
       position: relative;
       width: 295px;
-  }
-  .list li > i {
+}
+.list li > i {
       display: block;
       color: rgb(159, 169, 169);
       width: 45px;
       height: 45px;
       font-size: 50px;
       margin: 0 40px 0 0;
-  }
-  .list ul {
+}
+.list ul {
     max-width: 312px;
     border-right: 1px solid  rgb(219, 226, 226);
     margin-bottom: 0;
     padding: 40px 0 36px 0;
-  }
+}
   .list li:last-child {
     margin-bottom: 0;
   }
@@ -267,11 +269,67 @@ body {
       opacity: 0;
   }
 
+/*===============.product-feature==============*/
+.product-feature {
+    background-color: rgb(242, 249, 254);
+}
+.product-viev img:last-of-type {
+    display: none;
+}
+.product-title {
+    color: rgb(93, 202, 136);
+    font-weight: bold;
+    max-width: 485px;
+  }
+  .line:after {
+    content: "";
+    display: block;
+    background-color: rgb(148, 156, 156);
+    width: 104px;
+    height: 2px;
+    margin: 20px 0 40px 0;
+  }
+  .product-subtitle {
+    color: rgb(140, 148, 148);
+    max-width: 430px;
+    margin-bottom: 0;
+  }
+  .paragraph-product {
+    font-size: 16px;
+    color: rgb(140, 148, 148);
+    max-width: 430px;
+    margin: 30px 0 50px 0;
+  }
+  .product_product-feature {
+      display: flex;
+      padding-bottom: 80px;
+  }
+  .product-description {
+      margin-top: 160px;
+      flex-basis: 50%;
+  }
+  .product-viev {
+      margin-top: 80px;
+      display: flex;
+      flex-basis: 50%;
+      cursor: pointer;
+  }
+  .product-viev img {
+      margin: 0 auto;
+  }
+  .product__button {
+      border: 3px solid #AAB2B5;
+      color: #91999c;
+  }
+  .product-viev:hover img:first-of-type {
+      display: none;
+  }
+.product-viev:hover img:last-of-type {
+    display: block;
+}
   
   
 
-
-/*====================header===================*/
 /*====================header===================*/
 /*====================header===================*/
 /*====================header===================*/
@@ -377,6 +435,11 @@ body {
     .main-banner {
         height: 520px;
     }
+    /*.product-feature*/
+    .product_product-feature {
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 /* Extra Small Devices, Phones */
@@ -406,6 +469,13 @@ body {
     .p-list_items {
         margin-bottom: 60px;
     }
+    /*.product-feature*/
+    .product-description {
+        margin-top: 90px;
+    }
+    .product_product-feature {
+        padding-bottom: 50px;
+    }
 }
 
 
@@ -422,6 +492,11 @@ body {
     }
     .list__items i {
         font-size: 150px;
+    }
+    /*.product-feature*/
+    .product-viev img {
+        width: 60%;
+        height: 60%;
     }
 }
 
